@@ -1,0 +1,57 @@
+﻿<Page x:Class="DE5Kile.MainPage.AddUslugi"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DE5Kile.MainPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1800"
+      Title="AddUslugi">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="1400"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="ДОБАВЛЕНИЕ УСЛУГИ" Grid.Column="2" Style="{StaticResource LabMainWin}" HorizontalAlignment="Center"/>
+        <Border Style="{StaticResource BorderMainWin}" Grid.Row="1">
+            <TextBlock Text="Наименование"  Style="{StaticResource TextBlockMainWin}"/>
+        </Border>
+        <Border Style="{StaticResource BorderMainWin}" Grid.Row="2">
+            <TextBlock Text="Стоимость" Style="{StaticResource TextBlockMainWin}"/>
+        </Border>
+        <Border Style="{StaticResource BorderMainWin}" Grid.Row="3">
+            <TextBlock Text="Длительность" Style="{StaticResource TextBlockMainWin}"/>
+        </Border>
+        <Border Style="{StaticResource BorderMainWin}" Grid.Row="4">
+            <TextBlock Text="Описание" Style="{StaticResource TextBlockMainWin}"/>
+        </Border>
+        <Border Style="{StaticResource BorderMainWin}" Grid.Row="5">
+            <TextBlock Text="Действующая скидка" Style="{StaticResource TextBlockMainWin}"/>
+        </Border>
+        <Border Style="{StaticResource BorderMainWin}" Grid.Row="6">
+            <TextBlock Text="Главное изображение" Style="{StaticResource TextBlockMainWin}"/>
+        </Border>
+   
+        <Button Content="Назад" Grid.Row="7" Grid.Column="0" Style="{StaticResource ButMainWin}"/>
+        <TextBox Grid.Row="1" Grid.Column="2" MaxHeight="50" Text="{Binding naimenov}" />
+        <TextBox Grid.Row="2" Grid.Column="2" Text="{Binding kolichestvo}"/>
+        <TextBox Grid.Row="3" Grid.Column="2" Text="{Binding cena}"/>
+        <TextBox Grid.Row="4" Grid.Column="2" Text="{Binding cena}"/>
+        <TextBox Grid.Row="5" Grid.Column="2" Text="{Binding cena}"/>
+        <TextBox Grid.Row="6" Grid.Column="2" Text="{Binding cena}"/>
+        <Button Grid.Row="7" Grid.Column="2" Content="Сохранить" x:Name="BtnSave" Style="{StaticResource ButMainWin}"/>
+    </Grid>
+</Page>

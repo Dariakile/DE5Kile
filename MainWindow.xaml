@@ -1,0 +1,39 @@
+﻿<Window x:Class="DE5Kile.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DE5Kile"
+        mc:Ignorable="d"
+        Title="Learn" MinHeight="1000" MinWidth="1800" MaxHeight="1000" MaxWidth="1800"
+        WindowStartupLocation="CenterScreen" Icon="/Image/school_logo.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="900"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Background="White" Grid.ColumnSpan="2">
+            <Image Source="/Image/school_logo.png" Width="100" Margin="10"/>
+            <Label Background="Transparent" BorderBrush="Transparent" Width="370"/>
+            <Border Margin="10" Style="{StaticResource BorderMainWin}">
+                <Button  Content="Услуги" x:Name="BtnUslugi" Width="250" FontSize="30" Style="{StaticResource ButMainWin}"
+                         Click="BtnUslugi_Click"/>
+            </Border>
+            <Border Margin="10" Style="{StaticResource BorderMainWin}">
+                <Button  Content="Товары" Width="250" FontSize="30" Style="{StaticResource ButMainWin}"/>
+            </Border>
+            <Border Margin="10" Style="{StaticResource BorderMainWin}">
+                <Button  Content="Наши сотрудники" Width="280" FontSize="30" Style="{StaticResource ButMainWin}"/>
+            </Border>
+            <Border Margin="10" Style="{StaticResource BorderMainWin}">
+                <Button  Content="Записаться на/к" Width="250" FontSize="30" Style="{StaticResource ButMainWin}"/>
+            </Border>
+            <Border Margin="10" Style="{StaticResource BorderMainWin}">
+                <Button x:Name="Vhod" Content="Войти" Width="150" FontSize="30" Style="{StaticResource ButMainWin}"
+                        Click="Vhod_Click"/>
+            </Border>
+        </StackPanel>
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
